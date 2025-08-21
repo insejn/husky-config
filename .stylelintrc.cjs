@@ -11,6 +11,7 @@ module.exports = {
     'scss/at-extend-no-missing-placeholder': true,
     'scss/dollar-variable-pattern': '^[_a-z0-9-]+$',
     'scss/percent-placeholder-pattern': '^[_a-z0-9-]+$',
+    'scss/no-semicolon': true,
   },
   overrides: [
     {

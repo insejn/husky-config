@@ -12,7 +12,7 @@ module.exports = {
     ],
     'subject-empty': [2, 'never'],
     'header-max-length': [2, 'always', 120],
-    'scope-empty': [2, 'never'],
+    'scope-empty': [0, 'never'],
     'feat-fix-must-have-jira': [2, 'always'],
   },
 
