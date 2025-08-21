@@ -1,4 +1,6 @@
 // commitlint.config.cjs
+
+// chalk v5 jest ESM only, więc trzeba importować dynamicznie:
 let chalk;
 (async () => {
   chalk = (await import('chalk')).default;
@@ -71,17 +73,9 @@ module.exports = {
               ok,
               chalk.red.bold('❌ Wrong feat format!\n') +
               chalk.yellow('Expected one of:\n') +
-              chalk.green.bold(' feat') +
-              chalk.cyan('(scope?): ') +
-              chalk.blue.italic(' [PROJECT-123] ') +
-              chalk.gray.italic('Your message\n') +
-              chalk.green.bold('  feat') +
-              chalk.cyan('(scope?): ') +
-              chalk.blue.italic(' [PROJECT-123]') +
-              chalk.yellow.italic('[PROJECT-456] ') +
-              chalk.gray.italic('Your message\n') +
-              chalk.white.bold(`\nYour commit looks bad :(\n`) +
-              chalk.white(`${header}`)
+              chalk.green('  feat(scope?): [PROJECT-123] Your message\n') +
+              chalk.green('  feat(scope?): [PROJECT-123][PROJECT-456] Your message\n') +
+              chalk.cyan(`\nYour commit:\n  ${header}`)
             ];
           }
 
@@ -91,10 +85,8 @@ module.exports = {
               ok,
               chalk.red.bold('❌ Wrong fix format!\n') +
               chalk.yellow('Expected:\n') +
-              chalk.green.bold('fix(scope?): [PARENT-123][PROJECT-456] ') +
-              chalk.gray.bold('Your message\n') +
-              chalk.white.bold(`\nYour commit looks bad :(:\n`)  +
-              chalk.white(`${header}`)
+              chalk.green('  fix(scope?): [PARENT-123][PROJECT-456] Your message\n') +
+              chalk.cyan(`\nYour commit:\n  ${header}`)
             ];
           }
 

@@ -6,7 +6,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"ima workin",
-    "prepare": "husky"
+    "prepare": "husky",
+    "lint:styles": "stylelint 'assets/**/*.sass' --custom-syntax postcss-sass"
   },
   "author": "",
   "license": "ISC",
@@ -14,6 +15,9 @@
     "@commitlint/config-conventional": "^19.8.1",
     "chalk": "^5.6.0",
     "commitlint": "^19.8.1",
-    "lefthook": "^1.12.3"
+    "lefthook": "^1.12.3",
+    "postcss-sass": "^0.5.0",
+    "stylelint": "^16.23.1",
+    "stylelint-config-standard-scss": "^15.0.1"
   }
 }

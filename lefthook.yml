@@ -1,4 +1,11 @@
 commit-msg:
-  commands:
-    commitlint:
+  parallel: true
+  jobs:
+    - name: commitlint
       run: npx commitlint --edit {1}
+pre-commit:
+  parallel: true
+  jobs:
+  - name: sass
+    # run: npx stylelint --custom-syntax postcss-sass {staged_files}
+    run: npx stylelint --custom-syntax postcss-sass
