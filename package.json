@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"ima workin",
     "prepare": "husky",
-    "lint:styles": "stylelint 'assets/**/*.sass' --fix"
+    "lint:styles": "stylelint 'assets/**/*.sass' --custom-syntax postcss-sass"
   },
   "author": "",
   "license": "ISC",
