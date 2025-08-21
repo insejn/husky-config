@@ -2,3 +2,7 @@ commit-msg:
   commands:
     commitlint:
       run: npx commitlint --edit {1}
+pre-commit:
+  commands:
+    stylelint:
+      run: npx stylelint 'assets/**/*.sass' --fix
