@@ -6,6 +6,5 @@ pre-commit:
   parallel: true
   jobs:
   - name: sass
-    glob: "*.sass"
     # run: npx stylelint --custom-syntax postcss-sass {staged_files}
     run: npx stylelint --custom-syntax postcss-sass
