@@ -4,7 +4,7 @@ commit-msg:
       run: npx commitlint --edit {1}
 pre-commit:
   parallel: true
-  commands:
+  jobs:
     sass:
       glob: "*.sass"
       run: npx stylelint --custom-syntax postcss-sass {staged_files}
